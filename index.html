@@ -1,0 +1,829 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="ru"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Тест «Первое впечатление о мужчине»&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>* { box-sizing: border-box; margin: 0; padding: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100vh;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #333;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>line-height: 1.6;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 800px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 25px 80px rgba(0,0,0,0.35);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 40px 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header h1 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-shadow: 0 2px 10px rgba(0,0,0,0.2);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.header p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.9;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.form-body {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f8f9fa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-left: 5px solid #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 17px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.section-title .num {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 1px 4px rgba(0,0,0,0.04);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #eee;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question-text {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #444;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 8px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>user-select: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f3effa;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>accent-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.option:has(input:checked) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f3effa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 70px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid #e0e0e0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: inherit;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>resize: vertical;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: border-color 0.2s, box-shadow 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>textarea:focus {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>outline: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 0 3px rgba(118,75,162,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-question {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-option input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 28px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>accent-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-option label {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 500;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.scale-labels {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: space-between;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #999;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 0 4px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.final-options {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 8px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.final-option {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 12px 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.2s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 2px solid transparent;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.final-option:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f3effa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.final-option input[type="radio"] {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>accent-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-shrink: 0;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.final-option:has(input:checked) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #f3effa;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 600;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transition: all 0.3s;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>letter-spacing: 0.5px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:hover {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(-3px);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 15px 40px rgba(118,75,162,0.4);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:active {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: translateY(0);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.submit-btn:disabled {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: not-allowed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>transform: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-overlay {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: fixed;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>top: 0; left: 0; right: 0; bottom: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: rgba(0,0,0,0.6);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>z-index: 1000;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-card {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: white;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 50px 40px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>max-width: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>animation: popIn 0.4s ease;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@keyframes popIn {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>0% { transform: scale(0.8); opacity: 0; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>100% { transform: scale(1); opacity: 1; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-card .icon {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 64px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-card h2 {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #764ba2;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 26px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.success-card p {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #666;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 15px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.required-hint {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>color: #e74c3c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-size: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: 4px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: none;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question.invalid .required-hint {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: block;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.question.invalid {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-color: #e74c3c;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>background: #fff5f5;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 600px) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.header { padding: 30px 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.header h1 { font-size: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.form-body { padding: 20px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.section { padding: 14px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.options { gap: 8px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.option { padding: 6px 12px; font-size: 13px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.scale-options { gap: 4px; }</p>
+<p class="p1"><span class="Apple-converted-space">            </span>.scale-option input { width: 24px; height: 24px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h1&gt;Тест «Первое впечатление о мужчине»&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Заполни тест сразу после первой встречи, пока впечатления ещё свежие&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="form-body"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="testForm" action="https://formspree.io/f/mpparlkv" method="POST"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 1: Внешнее впечатление --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;1&lt;/span&gt; Внешнее впечатление&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;1. Он выглядел ухоженным и опрятным?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q1" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;2. Его внешний вид соответствовал ситуации?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q2" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;3. Он производил впечатление уверенного в себе мужчины?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q3" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;4. Его мимика и жесты казались естественными?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q4" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;5. Он держался спокойно и раскованно?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q5" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 2: Манера общения --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;2&lt;/span&gt; Манера общения&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;6. Он был вежлив и уважителен?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q6" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;7. Он внимательно тебя слушал?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q7" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;8. Он не перебивал тебя?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q8" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;9. Он проявлял искренний интерес к тебе?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q9" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;10. Он задавал вопросы о тебе, а не говорил только о себе?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q10" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;11. С ним было легко поддерживать разговор?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q11" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q11" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q11" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;12. Он умел шутить, не переходя границы?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q12" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q12" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q12" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;13. Ты чувствовала, что он действительно слышит тебя?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q13" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q13" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q13" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 3: Поведение --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;3&lt;/span&gt; Поведение&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;14. Он вёл себя уважительно по отношению к другим людям?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q14" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q14" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q14" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;15. Он был вежлив с персоналом заведения?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q15" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q15" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q15" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;16. Он не пытался чрезмерно хвастаться своими деньгами, связями или достижениями?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q16" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q16" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q16" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;17. Он не пытался постоянно показать своё превосходство?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q17" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q17" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q17" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;18. Он уважал твои личные границы?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q18" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q18" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q18" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;19. Рядом с ним ты чувствовала себя комфортно?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q19" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q19" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q19" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;20. Рядом с ним ты чувствовала себя в безопасности?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q20" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q20" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q20" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 4: Первое эмоциональное впечатление --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;4&lt;/span&gt; Первое эмоциональное впечатление&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;21. Он вызвал у тебя симпатию?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q21" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q21" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q21" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;22. Тебе было интересно проводить с ним время?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q22" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q22" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q22" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;23. Тебе хотелось продолжать разговор после окончания встречи?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q23" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q23" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q23" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;24. После встречи тебе хотелось узнать его лучше?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q24" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q24" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q24" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;25. Ты хотела бы встретиться с ним ещё раз?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q25" value="Да" required&gt; Да&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q25" value="Нет"&gt; Нет&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="option"&gt;&lt;input type="radio" name="q25" value="Не могу оценить"&gt; Не могу оценить&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите ответ&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 5: Короткий психологический портрет --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;5&lt;/span&gt; Короткий психологический портрет&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Какие три качества ты заметила в нём в первую очередь?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="qualities" placeholder="1. ...&amp;#10;2. ...&amp;#10;3. ..." rows="3"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Что тебе понравилось в нём больше всего?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="liked_most" rows="2"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Что тебя насторожило или вызвало сомнения?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="concerns" rows="2"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Каким одним словом ты бы описала этого мужчину после первой встречи?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="one_word" rows="1"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Какое главное чувство осталось у тебя после встречи?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="main_feeling" rows="1"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Что тебе хотелось бы узнать о нём при следующей встрече?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="next_meeting" rows="2"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 6: Оценка по шкале --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;6&lt;/span&gt; Оценка по шкале от 1 до 10&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scale-question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Насколько он тебе понравился?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="1" required id="s1_1"&gt;&lt;label for="s1_1"&gt;1&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="2" id="s1_2"&gt;&lt;label for="s1_2"&gt;2&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="3" id="s1_3"&gt;&lt;label for="s1_3"&gt;3&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="4" id="s1_4"&gt;&lt;label for="s1_4"&gt;4&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="5" id="s1_5"&gt;&lt;label for="s1_5"&gt;5&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="6" id="s1_6"&gt;&lt;label for="s1_6"&gt;6&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="7" id="s1_7"&gt;&lt;label for="s1_7"&gt;7&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="8" id="s1_8"&gt;&lt;label for="s1_8"&gt;8&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="9" id="s1_9"&gt;&lt;label for="s1_9"&gt;9&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale1" value="10" id="s1_10"&gt;&lt;label for="s1_10"&gt;10&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-labels"&gt;&lt;span&gt;Очень плохо&lt;/span&gt;&lt;span&gt;Отлично&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите оценку&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scale-question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Насколько интересным он тебе показался?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="1" required id="s2_1"&gt;&lt;label for="s2_1"&gt;1&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="2" id="s2_2"&gt;&lt;label for="s2_2"&gt;2&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="3" id="s2_3"&gt;&lt;label for="s2_3"&gt;3&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="4" id="s2_4"&gt;&lt;label for="s2_4"&gt;4&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="5" id="s2_5"&gt;&lt;label for="s2_5"&gt;5&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="6" id="s2_6"&gt;&lt;label for="s2_6"&gt;6&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="7" id="s2_7"&gt;&lt;label for="s2_7"&gt;7&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="8" id="s2_8"&gt;&lt;label for="s2_8"&gt;8&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="9" id="s2_9"&gt;&lt;label for="s2_9"&gt;9&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale2" value="10" id="s2_10"&gt;&lt;label for="s2_10"&gt;10&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-labels"&gt;&lt;span&gt;Совсем неинтересен&lt;/span&gt;&lt;span&gt;Очень интересен&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите оценку&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scale-question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Насколько комфортно тебе было рядом с ним?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="1" required id="s3_1"&gt;&lt;label for="s3_1"&gt;1&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="2" id="s3_2"&gt;&lt;label for="s3_2"&gt;2&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="3" id="s3_3"&gt;&lt;label for="s3_3"&gt;3&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="4" id="s3_4"&gt;&lt;label for="s3_4"&gt;4&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="5" id="s3_5"&gt;&lt;label for="s3_5"&gt;5&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="6" id="s3_6"&gt;&lt;label for="s3_6"&gt;6&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="7" id="s3_7"&gt;&lt;label for="s3_7"&gt;7&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="8" id="s3_8"&gt;&lt;label for="s3_8"&gt;8&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="9" id="s3_9"&gt;&lt;label for="s3_9"&gt;9&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale3" value="10" id="s3_10"&gt;&lt;label for="s3_10"&gt;10&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-labels"&gt;&lt;span&gt;Очень некомфортно&lt;/span&gt;&lt;span&gt;Очень комфортно&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите оценку&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scale-question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Насколько ты ему доверяешь после первой встречи?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="1" required id="s4_1"&gt;&lt;label for="s4_1"&gt;1&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="2" id="s4_2"&gt;&lt;label for="s4_2"&gt;2&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="3" id="s4_3"&gt;&lt;label for="s4_3"&gt;3&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="4" id="s4_4"&gt;&lt;label for="s4_4"&gt;4&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="5" id="s4_5"&gt;&lt;label for="s4_5"&gt;5&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="6" id="s4_6"&gt;&lt;label for="s4_6"&gt;6&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="7" id="s4_7"&gt;&lt;label for="s4_7"&gt;7&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="8" id="s4_8"&gt;&lt;label for="s4_8"&gt;8&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="9" id="s4_9"&gt;&lt;label for="s4_9"&gt;9&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale4" value="10" id="s4_10"&gt;&lt;label for="s4_10"&gt;10&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-labels"&gt;&lt;span&gt;Совсем не доверяю&lt;/span&gt;&lt;span&gt;Полностью доверяю&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите оценку&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="scale-question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Насколько ты хочешь второй встречи?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="1" required id="s5_1"&gt;&lt;label for="s5_1"&gt;1&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="2" id="s5_2"&gt;&lt;label for="s5_2"&gt;2&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="3" id="s5_3"&gt;&lt;label for="s5_3"&gt;3&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="4" id="s5_4"&gt;&lt;label for="s5_4"&gt;4&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="5" id="s5_5"&gt;&lt;label for="s5_5"&gt;5&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="6" id="s5_6"&gt;&lt;label for="s5_6"&gt;6&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="7" id="s5_7"&gt;&lt;label for="s5_7"&gt;7&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="8" id="s5_8"&gt;&lt;label for="s5_8"&gt;8&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="9" id="s5_9"&gt;&lt;label for="s5_9"&gt;9&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;div class="scale-option"&gt;&lt;input type="radio" name="scale5" value="10" id="s5_10"&gt;&lt;label for="s5_10"&gt;10&lt;/label&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="scale-labels"&gt;&lt;span&gt;Совсем не хочу&lt;/span&gt;&lt;span&gt;Очень хочу&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите оценку&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Раздел 7: Итоговое впечатление --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="section"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="section-title"&gt;&lt;span class="num"&gt;7&lt;/span&gt; Итоговое впечатление&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                    </span></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Если бы тебя попросили описать его подруге после этой встречи, что бы ты сказала?&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="describe_to_friend" rows="3"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question" data-required&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Твоё первое впечатление о нём в целом:&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="final-options"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="final-option"&gt;&lt;input type="radio" name="overall" value="Очень положительное" required&gt; Очень положительное&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="final-option"&gt;&lt;input type="radio" name="overall" value="Скорее положительное"&gt; Скорее положительное&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="final-option"&gt;&lt;input type="radio" name="overall" value="Нейтральное"&gt; Нейтральное&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="final-option"&gt;&lt;input type="radio" name="overall" value="Скорее отрицательное"&gt; Скорее отрицательное&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;label class="final-option"&gt;&lt;input type="radio" name="overall" value="Отрицательное"&gt; Отрицательное&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="required-hint"&gt;⚠️ Выберите вариант&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="question-text"&gt;Главный вывод после встречи:&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;textarea name="main_conclusion" rows="2"&gt;&lt;/textarea&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="hidden" name="_replyto" value="Vadimsorucean@gmail.com"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="hidden" name="_subject" value="Новая анкета: Первое впечатление о мужчине"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button type="submit" class="submit-btn" id="submitBtn"&gt;Отправить анкету&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="success-overlay" id="successOverlay"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="success-card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="icon"&gt;✅&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2&gt;Спасибо!&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p&gt;Анкета успешно отправлена. Результаты придут на почту.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const form = document.getElementById('testForm');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const submitBtn = document.getElementById('submitBtn');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const successOverlay = document.getElementById('successOverlay');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function validateForm() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let valid = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.querySelectorAll('[data-required]').forEach(el =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const inputs = el.querySelectorAll('input[type="radio"]');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const checked = Array.from(inputs).some(i =&gt; i.checked);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (!checked) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.add('invalid');</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>valid = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>el.classList.remove('invalid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">            </span>return valid;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.querySelectorAll('input[type="radio"]').forEach(input =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>input.addEventListener('change', function() {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const question = this.closest('[data-required]');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (question) question.classList.remove('invalid');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>});</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>form.addEventListener('submit', async function(e) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (!validateForm()) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const firstError = document.querySelector('.invalid');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (firstError) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.disabled = true;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>submitBtn.textContent = 'Отправка...';</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>const formData = new FormData(form);</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>const response = await fetch(form.action, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>method: 'POST',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>body: formData,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>headers: { 'Accept': 'application/json' }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>if (response.ok) {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>successOverlay.style.display = 'flex';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>form.reset();</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>setTimeout(() =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>successOverlay.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}, 5000);</p>
+<p class="p1"><span class="Apple-converted-space">                </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>alert('Что-то пошло не так. Попробуйте ещё раз.');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>alert('Ошибка соединения. Проверьте интернет и попробуйте снова.');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} finally {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>submitBtn.disabled = false;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>submitBtn.textContent = 'Отправить анкету';</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
